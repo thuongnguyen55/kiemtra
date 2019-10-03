@@ -25,14 +25,19 @@ namespace kiemtraketthucmon
             InitializeComponent();
         }
 
-        private void Ok_Click(object sender, RoutedEventArgs e)
+        private void btnMeo_Click(object sender, RoutedEventArgs e)
         {
             Meo Meo = new Meo();
-            Meo.tiengkeu = "Meo Meo";
+            Meo.keu = "Meo meo";
+            Meo.MauLongdv = "vang";
             Meo.Talk();
+        }
 
+        private void BtnCho_Click(object sender, RoutedEventArgs e)
+        {
             Cho cho = new Cho();
-            cho.tiengkeu = "Gau Gau";
+            cho.keu = "Gau gau";
+            cho.MauLongdv = "den";
             cho.Talk();
         }
     }

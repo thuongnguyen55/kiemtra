@@ -11,7 +11,7 @@ namespace kiemtraketthucmon
     {
         private string Keu;
 
-        public string tiengkeu
+        public string keu
         {
             get { return Keu; }
             set { Keu = value; }
@@ -26,18 +26,24 @@ namespace kiemtraketthucmon
         {
         }
 
-        public string MauLong
+        private string MauLong;
+
+        public string MauLongdv
         {
-            get { return MauLong; }
-            set { MauLong = value; }
+            get
+            { return MauLong; }
+            set
+            { MauLong = value; }
         }
+
+
 
         public virtual void Talk()
         {
-            if (tiengkeu.Equals("Gau Gau"))
-                MessageBox.Show("Cho Keu " + this.tiengkeu);
-            else if (tiengkeu.Equals("Meo Meo"))
-                MessageBox.Show("Meo Keu " + this.tiengkeu);
+            if (keu.Equals("Gau gau") && (MauLongdv.Equals("den")))
+                MessageBox.Show( this.keu + "Toi la cho long mau: " + this.MauLongdv);
+            else if (keu.Equals("Meo meo") && (MauLongdv.Equals("vang")))
+                MessageBox.Show( this.keu + "Toi la meo long mau:" + this.MauLongdv);
         }
     }
 }
