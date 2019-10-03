@@ -3,23 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace kiemtraketthucmon
 {
     class DongVat
     {
+        private string Keu;
+
+        public string tiengkeu
+        {
+            get { return Keu; }
+            set { Keu = value; }
+        }
+
+        public DongVat(string stKeu)
+        {
+            this.Keu = stKeu;
+        }
+
         public DongVat()
         {
         }
-        public DongVat(string mauLong)
+
+        public string MauLong
         {
-            MauLong = mauLong;
+            get { return MauLong; }
+            set { MauLong = value; }
         }
-        private string mauLong;
-        public string MauLong { get => mauLong; set => mauLong = value; }
-        public virtual string keu()
+
+        public virtual void Talk()
         {
-            return "";
+            if (tiengkeu.Equals("Gau Gau"))
+                MessageBox.Show("Cho Keu " + this.tiengkeu);
+            else if (tiengkeu.Equals("Meo Meo"))
+                MessageBox.Show("Meo Keu " + this.tiengkeu);
         }
     }
 }

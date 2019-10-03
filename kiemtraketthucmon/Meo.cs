@@ -8,16 +8,9 @@ namespace kiemtraketthucmon
 {
     class Meo : DongVat
     {
-        public Meo()
+        public override void Talk()
         {
-        }
-        public Meo(string mauLong) : base(mauLong)
-        {
-            this.MauLong = mauLong;
-        }
-        public override string keu()
-        {
-            return base.keu() + "Meo Meo";
+            base.Talk();
         }
     }
 }
